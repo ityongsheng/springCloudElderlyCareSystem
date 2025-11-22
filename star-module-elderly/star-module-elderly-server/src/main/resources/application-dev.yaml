@@ -35,7 +35,11 @@ star:
     #   prefix: /app-api
     #   controller: "**.controller.app.**"
   security:
-    permit-all-urls: []  # 免登录的 URL 列表
+    permit-all-urls:  # 免登录的 URL 列表
+      - /admin-api/elderly/service-item/list-all-simple  # 获取精简服务项目列表（测试接口）
+      - /swagger-ui/**  # Swagger UI
+      - /v3/api-docs/**  # Swagger API 文档
+      - /doc.html  # Knife4j 文档
 
 management:
   endpoints:
