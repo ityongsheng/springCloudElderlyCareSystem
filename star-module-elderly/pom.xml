@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.star.gg</groupId>
+        <artifactId>star</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>star-module-elderly</artifactId>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        elderly-care 模块，承载养老档案、健康监测、服务项目与订单等业务能力。
+    </description>
+    <modules>
+        <module>star-module-elderly-api</module>
+        <module>star-module-elderly-biz</module>
+        <module>star-module-elderly-server</module>
+    </modules>
+</project>

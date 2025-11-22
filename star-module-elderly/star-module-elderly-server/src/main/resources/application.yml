@@ -1,0 +1,55 @@
+server:
+  port: 8095
+spring:
+  application:
+    name: star-module-elderly-server
+  main:
+    # 👇👇👇 加上这一行，允许同名 Bean 覆盖 👇👇👇
+    allow-bean-definition-overriding: true
+  profiles:
+    active: dev  # 当前激活环境
+  config:
+    import:
+      - optional:classpath:application-${spring.profiles.active}.yaml  # 本地分环境文件
+      - optional:nacos:${spring.application.name}-${spring.profiles.active}.yaml  # Nacos 同名 DataId
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+          username: root
+          password: 123456 # TODO 请修改为真实安全密码
+          driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    time-zone: Asia/Shanghai
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: dev
+        group: DEFAULT_GROUP
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: dev
+        group: DEFAULT_GROUP
+        file-extension: yaml
+        refresh-enabled: true
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+logging:
+  level:
+    root: INFO
+    cn.start.pp.module.elderly: INFO

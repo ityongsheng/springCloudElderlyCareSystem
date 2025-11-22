@@ -1,0 +1,2 @@
+cn.start.pp.framework.redis.config.StarRedisAutoConfiguration
+cn.start.pp.framework.redis.config.StarCacheAutoConfiguration

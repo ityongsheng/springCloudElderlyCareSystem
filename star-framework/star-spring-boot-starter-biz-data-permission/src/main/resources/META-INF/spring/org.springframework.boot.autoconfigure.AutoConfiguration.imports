@@ -1,0 +1,3 @@
+cn.start.pp.framework.datapermission.config.StarDataPermissionAutoConfiguration
+cn.start.pp.framework.datapermission.config.StarDeptDataPermissionAutoConfiguration
+cn.start.pp.framework.datapermission.config.StarDataPermissionRpcAutoConfiguration

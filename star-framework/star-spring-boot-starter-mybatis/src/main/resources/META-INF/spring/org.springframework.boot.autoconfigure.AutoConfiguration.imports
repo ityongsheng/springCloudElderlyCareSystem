@@ -1,0 +1,3 @@
+cn.start.pp.framework.datasource.config.StarDataSourceAutoConfiguration
+cn.start.pp.framework.mybatis.config.StarMybatisAutoConfiguration
+cn.start.pp.framework.translate.config.StarTranslateAutoConfiguration

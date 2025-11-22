@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.star.gg</groupId>
+        <artifactId>star-module-elderly</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>star-module-elderly-biz</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        elderly-care 模块业务实现
+    </description>
+
+
+
+
+    <dependencies>
+        <!-- 本模块 API -->
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-module-elderly-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <!-- 其它跨模块 API 可按需添加，例如 system / infra -->
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-module-system-api</artifactId>
+            <version>${revision}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-module-infra-api</artifactId>
+            <version>${revision}</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 基础环境 & Web & 安全 -->
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-env</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- 数据存储 & 缓存 -->
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-redis</artifactId>
+        </dependency>
+
+        <!-- RPC -->
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-rpc</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 注册中心 & 配置中心（如果 env 未包含，可视情况保留） -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 定时任务 & 消息队列 -->
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-job</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-mq</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 工具扩展 -->
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-excel</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-monitor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 测试 -->
+        <dependency>
+            <groupId>cn.star.gg</groupId>
+            <artifactId>star-spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

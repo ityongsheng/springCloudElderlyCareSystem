@@ -1,0 +1,3 @@
+cn.start.pp.framework.mq.redis.config.StarRedisMQProducerAutoConfiguration
+cn.start.pp.framework.mq.redis.config.StarRedisMQConsumerAutoConfiguration
+cn.start.pp.framework.mq.rabbitmq.config.StarRabbitMQAutoConfiguration

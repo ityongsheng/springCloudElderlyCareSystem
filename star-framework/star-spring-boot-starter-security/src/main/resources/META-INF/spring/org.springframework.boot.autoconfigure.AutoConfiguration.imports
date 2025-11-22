@@ -1,0 +1,5 @@
+cn.start.pp.framework.security.config.StarSecurityRpcAutoConfiguration
+cn.start.pp.framework.security.config.StarSecurityAutoConfiguration
+cn.start.pp.framework.security.config.StarWebSecurityConfigurerAdapter
+cn.start.pp.framework.operatelog.config.StarOperateLogConfiguration
+cn.start.pp.framework.operatelog.config.StarOperateLogRpcAutoConfiguration

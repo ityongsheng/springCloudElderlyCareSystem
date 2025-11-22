@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 1
+#      password: 123456
+
+star:
+  info:
+    base-package: cn.start.pp.module.elderly
+    version: 1.0.0
+  swagger:
+    title: 养老服务
+    description: 养老档案、健康监测、服务项目与订单接口
+    version: ${star.info.version}
+    url: ${star.web.admin-ui.url}
+    email: admin@example.com
+    author: 系统管理员
+    license: MIT
+    license-url: https://opensource.org/licenses/MIT
+  web:
+    admin-ui:
+      url: http://localhost:8095  # 必填，避免 WebProperties.adminUi 绑定失败
+    # 可选：自定义前缀与包匹配，使用默认值即可，不强制配置
+    # admin-api:
+    #   prefix: /admin-api
+    #   controller: "**.controller.admin.**"
+    # app-api:
+    #   prefix: /app-api
+    #   controller: "**.controller.app.**"
+  security:
+    permit-all-urls: []  # 免登录的 URL 列表
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+--- #################### 定时任务相关配置 ####################
+
+xxl:
+  job:
+    enabled: false # 禁用定时任务，如需使用请设置为 true 并配置 admin 地址
+    executor:
+      appname: ${spring.application.name} # 执行器 AppName
+      logpath: ${user.home}/logs/xxl-job/${spring.application.name} # 执行器运行日志文件存储磁盘路径
+    admin:
+      addresses: http://127.0.0.1:9090/xxl-job-admin # 调度中心部署地址
+    accessToken: default_token # 执行器通讯TOKEN

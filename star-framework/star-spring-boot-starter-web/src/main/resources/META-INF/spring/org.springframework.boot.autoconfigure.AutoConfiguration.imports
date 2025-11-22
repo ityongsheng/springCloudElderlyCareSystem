@@ -1,0 +1,8 @@
+cn.start.pp.framework.apilog.config.StarApiLogAutoConfiguration
+cn.start.pp.framework.jackson.config.StarJacksonAutoConfiguration
+cn.start.pp.framework.swagger.config.StarSwaggerAutoConfiguration
+cn.start.pp.framework.web.config.StarWebAutoConfiguration
+cn.start.pp.framework.apilog.config.StarApiLogRpcAutoConfiguration
+cn.start.pp.framework.xss.config.StarXssAutoConfiguration
+cn.start.pp.framework.banner.config.StarBannerAutoConfiguration
+cn.start.pp.framework.encrypt.config.StarApiEncryptAutoConfiguration
